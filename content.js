@@ -28,7 +28,7 @@
           title: " ",
           type: "mp4",
           url: "videos/style.mp4",
-          duration: "до 1 минуты",
+          duration: "30-60 сек",
           label: "",
           description: ""
         },
@@ -36,7 +36,7 @@
           title: " ",
           type: "mp4",
           url: "videos/adres.mp4",
-          duration: "до 1 минуты",
+          duration: "15-30 сек",
           label: "",
           description: ""
         }
@@ -44,7 +44,7 @@
     },
     {
       id: "mall-ad",
-      title: "Реклама в ТЦ",
+      title: "Реклама",
       accent: "Рекламный ролик",
       summary: "",
       description: "",
@@ -78,7 +78,7 @@
           title: " ",
           type: "mp4",
           url: "videos/edit_cs_2.mp4",
-          duration: "15-45 сек",
+          duration: "1-2 минуты",
           label: "",
           description: ""
         }
@@ -95,7 +95,7 @@
           title: " ",
           type: "mp4",
           url: "videos/ai.mp4",
-          duration: "30-90 сек",
+          duration: "30-60 сек",
           label: "",
           description: ""
         }
@@ -112,7 +112,7 @@
           title: " ",
           type: "mp4",
           url: "videos/macan.mp4",
-          duration: "30-60 сек",
+          duration: "15-30 сек",
           label: "",
           description: ""
         }
@@ -129,7 +129,7 @@
           title: " ",
           type: "mp4",
           url: "videos/samorazvitie.mp4",
-          duration: "15-45 сек",
+          duration: "4-5 мин",
           label: "",
           description: ""
         },
@@ -137,7 +137,7 @@
           title: " ",
           type: "mp4",
           url: "videos/nodi.mp4",
-          duration: "15-45 сек",
+          duration: "15-30 сек",
           label: "",
           description: ""
         }
