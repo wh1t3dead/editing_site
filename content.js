@@ -26,10 +26,10 @@
       videos: [
         {
           title: "Рилс по стилю",
-          type: "placeholder",
-          url: "",
+          type: "mp4",
+          url: "videos/slyle.mp4",
           duration: "15-30 сек",
-          label: "Добавь ссылку на ролик",
+          label: "",
           description: ""
         }
       ]
@@ -43,8 +43,8 @@
       videos: [
         {
           title: "Реклама в ТЦ",
-          type: "placeholder",
-          url: "",
+          type: "mp4",
+          url: "videos/library.mp4",
           duration: "до 1 мин",
           label: "Загрузи ссылку или mp4",
           description: ""
@@ -61,7 +61,7 @@
         {
           title: "Видео по рекламе проекта",
           type: "placeholder",
-          url: "",
+          url: "videos/frishinium.mp4",
           duration: "30-60 сек",
           label: "Добавь кейс проекта",
           description: ""
@@ -77,10 +77,10 @@
       videos: [
         {
           title: "Рилс по ксу (эдит)",
-          type: "placeholder",
-          url: "",
+          type: "mp4",
+          url: "videos/cs_edit_2.mp4",
           duration: "15-45 сек",
-          label: "Добавь edit",
+          label: "",
           description: ""
         }
       ]
@@ -95,9 +95,9 @@
         {
           title: "Экспертный рилс с использованием ИИ",
           type: "placeholder",
-          url: "",
+          url: "videos/ai.mp4",
           duration: "30-90 сек",
-          label: "Добавь экспертный ролик",
+          label: "",
           description: ""
         }
       ]
@@ -112,7 +112,7 @@
         {
           title: "Рилс с подкастом",
           type: "placeholder",
-          url: "",
+          url: "videos/macan.mp4",
           duration: "30-60 сек",
           label: "Добавь нарезку",
           description: ""
