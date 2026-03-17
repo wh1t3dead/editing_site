@@ -27,7 +27,7 @@
         {
           title: "Рилс по стилю",
           type: "mp4",
-          url: "videos/slyle.mp4",
+          url: "videos/sеyle.mp4",
           duration: "15-30 сек",
           label: "",
           description: ""
