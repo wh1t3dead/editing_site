@@ -77,7 +77,7 @@
         {
           title: "cs2",
           type: "mp4",
-          url: "videos/52.mp4",
+          url: "videos/edit_cs_2.mp4",
           duration: "1-2 минуты",
           label: "",
           description: ""
@@ -87,6 +87,7 @@
           type: "mp4",
           url: "videos/heronwater_trapozoid.mp4",
           duration: "5-15 сек",
+          volume: 0.6,
           label: "",
           description: ""
         },
@@ -128,6 +129,7 @@
           title: " ",
           type: "mp4",
           url: "videos/macan.mp4",
+          volume: 0.8,
           duration: "15-30 сек",
           label: "",
           description: ""
@@ -153,6 +155,7 @@
           title: " ",
           type: "mp4",
           url: "videos/nodi.mp4",
+          volume: 0.8,
           duration: "15-30 сек",
           label: "",
           description: ""
