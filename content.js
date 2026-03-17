@@ -50,7 +50,7 @@
       description: "",
       videos: [
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/library.mp4",
           duration: "15-30 сек",
@@ -58,7 +58,7 @@
           description: ""
         },
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/grishinium.mp4",
           duration: "30-60 сек",
@@ -75,7 +75,7 @@
       description: "",
       videos: [
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/edit_cs_2.mp4",
           duration: "15-45 сек",
@@ -92,7 +92,7 @@
       description: "",
       videos: [
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/ai.mp4",
           duration: "30-90 сек",
@@ -109,7 +109,7 @@
       description: "",
       videos: [
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/macan.mp4",
           duration: "30-60 сек",
@@ -126,7 +126,7 @@
       description: "",
       videos: [
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/samorazvitie.mp4",
           duration: "15-45 сек",
@@ -134,7 +134,7 @@
           description: ""
         },
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/nodi.mp4",
           duration: "15-45 сек",
