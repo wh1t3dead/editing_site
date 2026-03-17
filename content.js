@@ -78,7 +78,7 @@
           title: "cs2",
           type: "mp4",
           url: "videos/edit_cs_2.mp4",
-          volume: 0.7,
+          volume: 0.3,
           duration: "1-2 минуты",
           label: "",
           description: ""
@@ -88,7 +88,7 @@
           type: "mp4",
           url: "videos/heronwater_trapozoid.mp4",
           duration: "5-15 сек",
-          volume: 0.4,
+          volume: 0.2,
           label: "",
           description: ""
         },
