@@ -77,7 +77,7 @@
         {
           title: "cs2",
           type: "mp4",
-          url: "videos/edit_cs_2.mp4",
+          url: "videos/52.mp4",
           duration: "1-2 минуты",
           label: "",
           description: ""
