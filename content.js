@@ -19,15 +19,23 @@
   topics: [
     {
       id: "style-reels",
-      title: "Рилсы по стилю",
+      title: "Рилсы",
       accent: "Визуальный стиль",
       summary: "",
       description: "",
       videos: [
         {
-          title: "Рилс по стилю",
+          title: "Рилс по стилю 1",
           type: "mp4",
           url: "videos/style.mp4",
+          duration: "до 1 минуты",
+          label: "",
+          description: ""
+        },
+        {
+          title: "Рилс по стилю 2",
+          type: "mp4",
+          url: "videos/adres.mp4",
           duration: "до 1 минуты",
           label: "",
           description: ""
@@ -48,16 +56,7 @@
           duration: "15-30 сек",
           label: "",
           description: ""
-        }
-      ]
-    },
-    {
-      id: "project-ad",
-      title: "Реклама проекта",
-      accent: "Презентация идеи",
-      summary: "",
-      description: "",
-      videos: [
+        },
         {
           title: "Видео по рекламе проекта",
           type: "mp4",
@@ -70,13 +69,13 @@
     },
     {
       id: "cs-edit",
-      title: "КСУ / edit",
+      title: "CS2 edit",
       accent: "Edits",
       summary: "",
       description: "",
       videos: [
         {
-          title: "Рилс по ксу (эдит)",
+          title: "Эдит по ксу",
           type: "mp4",
           url: "videos/edit_cs_2.mp4",
           duration: "15-45 сек",
@@ -87,7 +86,7 @@
     },
     {
       id: "expert-ai",
-      title: "Экспертный reels c ИИ",
+      title: "reels c ИИ",
       accent: "Экспертный контент",
       summary: "",
       description: "",
@@ -104,7 +103,7 @@
     },
     {
       id: "podcast-reels",
-      title: "Рилсы из подкаста",
+      title: "Нарезки подкаста",
       accent: "Подкаст-контент",
       summary: "",
       description: "",
@@ -114,6 +113,31 @@
           type: "mp4",
           url: "videos/macan.mp4",
           duration: "30-60 сек",
+          label: "",
+          description: ""
+        }
+      ]
+    },
+    {
+      id: "youtube",
+      title: "Youtube видео",
+      accent: "YOUTUBE",
+      summary: "",
+      description: "",
+      videos: [
+        {
+          title: "Саморазвитие",
+          type: "mp4",
+          url: "videos/samorazvitie.mp4",
+          duration: "15-45 сек",
+          label: "",
+          description: ""
+        },
+        {
+          title: "НОДы",
+          type: "mp4",
+          url: "videos/nodi.mp4",
+          duration: "15-45 сек",
           label: "",
           description: ""
         }
