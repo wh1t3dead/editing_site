@@ -61,7 +61,7 @@
         {
           title: "Видео по рекламе проекта",
           type: "placeholder",
-          url: "videos/frishinium.mp4",
+          url: "videos/grishinium.mp4",
           duration: "30-60 сек",
           label: "Добавь кейс проекта",
           description: ""
