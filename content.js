@@ -2,7 +2,7 @@
   site: {
     brand: "Wh1te Dead",
     kicker: "Video editor / reels / ads / edits",
-    heroTitle: "Монтаж, который удерживает внимание и передаёт стиль проекта.",
+    heroTitle: "Монтаж",
     heroText: "",
     telegram: "https://t.me/Wh1te_dead",
     metrics: [
