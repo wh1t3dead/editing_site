@@ -25,7 +25,7 @@
       description: "",
       videos: [
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/style.mp4",
           duration: "до 1 минуты",
@@ -33,7 +33,7 @@
           description: ""
         },
         {
-          title: "",
+          title: " ",
           type: "mp4",
           url: "videos/adres.mp4",
           duration: "до 1 минуты",
