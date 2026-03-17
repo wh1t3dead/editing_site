@@ -11,6 +11,7 @@
 
   fillHero(data.site, totalVideos, data.topics.length);
   renderTopics(data.topics);
+  setupMediaRatios();
   setupSmoothAnchors();
   setupRevealAnimations();
 
@@ -167,6 +168,46 @@
     }
 
     return '<span class="video-card__hint">Ссылка пока не добавлена</span>';
+  }
+
+  function setupMediaRatios() {
+    Array.prototype.forEach.call(document.querySelectorAll('.video-card__media video'), function (video) {
+      var media = video.closest('.video-card__media');
+      if (!media) {
+        return;
+      }
+
+      if (video.readyState >= 1) {
+        applyMediaRatio(video, media);
+      }
+
+      video.addEventListener('loadedmetadata', function () {
+        applyMediaRatio(video, media);
+      });
+    });
+  }
+
+  function applyMediaRatio(video, media) {
+    var width = video.videoWidth || 0;
+    var height = video.videoHeight || 0;
+
+    media.classList.remove('is-portrait', 'is-landscape', 'is-square');
+
+    if (!width || !height) {
+      return;
+    }
+
+    if (height > width) {
+      media.classList.add('is-portrait');
+      return;
+    }
+
+    if (width > height) {
+      media.classList.add('is-landscape');
+      return;
+    }
+
+    media.classList.add('is-square');
   }
 
   function setupSmoothAnchors() {

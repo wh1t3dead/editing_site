@@ -421,15 +421,37 @@ h3 {
 }
 
 .video-card__media {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
     #090909;
 }
 
+.video-card__media.is-portrait {
+  aspect-ratio: 9 / 16;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.video-card__media.is-square {
+  aspect-ratio: 1 / 1;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
 .video-card__media video,
 .video-card__media iframe {
   height: 100%;
+}
+
+.video-card__media video {
+  object-fit: contain;
+}
+
+.video-card__media iframe {
   object-fit: cover;
 }
 
@@ -744,5 +766,6 @@ code {
     letter-spacing: 0.08em;
   }
 }
+
 
 
