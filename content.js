@@ -25,7 +25,7 @@
       description: "",
       videos: [
         {
-          title: "Рилс по стилю 1",
+          title: "",
           type: "mp4",
           url: "videos/style.mp4",
           duration: "до 1 минуты",
@@ -33,7 +33,7 @@
           description: ""
         },
         {
-          title: "Рилс по стилю 2",
+          title: "",
           type: "mp4",
           url: "videos/adres.mp4",
           duration: "до 1 минуты",
@@ -50,7 +50,7 @@
       description: "",
       videos: [
         {
-          title: "Реклама в ТЦ",
+          title: "",
           type: "mp4",
           url: "videos/library.mp4",
           duration: "15-30 сек",
@@ -58,7 +58,7 @@
           description: ""
         },
         {
-          title: "Видео по рекламе проекта",
+          title: "",
           type: "mp4",
           url: "videos/grishinium.mp4",
           duration: "30-60 сек",
@@ -69,13 +69,13 @@
     },
     {
       id: "cs-edit",
-      title: "CS2 edit",
+      title: "cs2 edit",
       accent: "Edits",
       summary: "",
       description: "",
       videos: [
         {
-          title: "Эдит по ксу",
+          title: "",
           type: "mp4",
           url: "videos/edit_cs_2.mp4",
           duration: "15-45 сек",
@@ -92,7 +92,7 @@
       description: "",
       videos: [
         {
-          title: "Экспертный рилс с использованием ИИ",
+          title: "",
           type: "mp4",
           url: "videos/ai.mp4",
           duration: "30-90 сек",
@@ -109,7 +109,7 @@
       description: "",
       videos: [
         {
-          title: "Рилс с подкастом",
+          title: "",
           type: "mp4",
           url: "videos/macan.mp4",
           duration: "30-60 сек",
@@ -126,7 +126,7 @@
       description: "",
       videos: [
         {
-          title: "Саморазвитие",
+          title: "",
           type: "mp4",
           url: "videos/samorazvitie.mp4",
           duration: "15-45 сек",
@@ -134,7 +134,7 @@
           description: ""
         },
         {
-          title: "НОДы",
+          title: "",
           type: "mp4",
           url: "videos/nodi.mp4",
           duration: "15-45 сек",
