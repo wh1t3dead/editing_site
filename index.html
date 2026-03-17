@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wh1te Dead | Портфолио по видеомонтажу</title>
+    <meta
+      name="description"
+      content="Портфолио по видеомонтажу: reels, рекламные ролики, edits, экспертный и подкаст-контент."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="page-home">
+    <a class="skip-link" href="#topics">К контенту</a>
+
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <span class="brand__mark">WD</span>
+        <span class="brand__text" data-brand-text>Wh1te Dead</span>
+      </a>
+
+      <nav class="topbar__nav">
+        <a href="#topics">Работы</a>
+        <a class="topbar__cta" data-telegram-link href="https://t.me/Wh1te_dead" target="_blank" rel="noreferrer">Telegram</a>
+      </nav>
+    </header>
+
+    <main id="top" class="layout" aria-live="polite">
+      <section class="hero reveal reveal--hero">
+        <div class="hero__copy">
+          <p class="eyebrow" id="hero-kicker">Video editor / reels / ads / edits</p>
+          <h1 id="hero-title">Монтаж, который удерживает внимание и передаёт стиль проекта.</h1>
+
+          <p class="hero__text" id="hero-text" hidden></p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" id="telegram-link" data-telegram-link href="https://t.me/Wh1te_dead" target="_blank" rel="noreferrer">
+              Написать в Telegram
+            </a>
+            <a class="button button--ghost" href="#topics">Смотреть работы</a>
+          </div>
+
+          <div class="metrics" id="hero-metrics"></div>
+        </div>
+      </section>
+
+      <section class="topics-section" id="topics">
+        <div class="topics-list" id="topics-list"></div>
+      </section>
+
+      <section class="cta-panel reveal">
+        <a class="telegram-widget" data-telegram-link href="https://t.me/Wh1te_dead" target="_blank" rel="noreferrer">
+          <span class="telegram-widget__label">Telegram</span>
+          <strong class="telegram-widget__handle" data-telegram-handle data-format="handle">@Wh1te_dead</strong>
+          <span class="telegram-widget__hint">Нажми, чтобы написать</span>
+        </a>
+      </section>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wh1te Dead | Админка контента</title>
+    <meta
+      name="description"
+      content="Локальная админка для обновления портфолио по видеомонтажу и экспорта content.js."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="page-admin">
+    <a class="skip-link" href="#admin-content">К редактору</a>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">WD</span>
+        <span class="brand__text" data-brand-text>Wh1te Dead</span>
+      </a>
+
+      <nav class="topbar__nav">
+        <a href="index.html">На сайт</a>
+        <a class="topbar__cta" data-telegram-link href="https://t.me/Wh1te_dead" target="_blank" rel="noreferrer">Telegram</a>
+      </nav>
+    </header>
+
+    <main id="admin-content" class="admin-layout">
+      <section class="admin-hero">
+        <div>
+          <p class="eyebrow">Админка без сервера</p>
+          <h1>Редактор контента для GitHub Pages.</h1>
+          <p class="hero__text">
+            Эта страница не публикует изменения сама. Она помогает быстро собрать новые темы
+            и видео, а затем скачать обновлённый <code>content.js</code> для коммита в GitHub.
+          </p>
+        </div>
+
+        <div class="admin-toolbar">
+          <button class="button button--primary" id="save-draft" type="button">Сохранить черновик</button>
+          <button class="button button--ghost" id="export-data" type="button">Скачать content.js</button>
+          <button class="button button--ghost" id="import-data" type="button">Импорт</button>
+          <button class="button button--ghost" id="reset-draft" type="button">Сбросить</button>
+          <input id="import-file" type="file" accept=".js,.json" hidden>
+        </div>
+      </section>
+
+      <section class="admin-note">
+        <strong>Важно:</strong> GitHub Pages статический. Полноценная админка с сохранением прямо
+        на сайте потребует отдельную авторизацию и внешний бэкенд. Здесь сделан бесплатный и
+        простой вариант: редактируешь, скачиваешь файл, заменяешь его в репозитории.
+      </section>
+
+      <section class="editor-grid">
+        <div class="editor-column">
+          <article class="editor-card">
+            <div class="editor-card__header">
+              <div>
+                <p class="eyebrow">Настройки сайта</p>
+                <h2>Главный экран</h2>
+              </div>
+            </div>
+
+            <div class="field-grid" id="site-fields"></div>
+          </article>
+
+          <article class="editor-card">
+            <div class="editor-card__header">
+              <div>
+                <p class="eyebrow">Темы и ролики</p>
+                <h2>Структура портфолио</h2>
+              </div>
+              <button class="button button--ghost" id="add-topic" type="button">Добавить тему</button>
+            </div>
+
+            <div id="admin-topics"></div>
+          </article>
+        </div>
+
+        <aside class="editor-sidebar">
+          <article class="editor-card">
+            <p class="eyebrow">Сводка</p>
+            <h2>Что попадёт на сайт</h2>
+            <div id="content-summary" class="content-summary"></div>
+          </article>
+
+          <article class="editor-card">
+            <p class="eyebrow">Подсказка</p>
+            <h2>Какие ссылки поддерживаются</h2>
+            <div class="support-list">
+              <p><strong>youtube</strong> - обычная ссылка на YouTube, сайт сам превратит её во встроенное видео.</p>
+              <p><strong>vimeo</strong> - ссылка на Vimeo.</p>
+              <p><strong>mp4</strong> - прямой путь к видеофайлу, например если положишь ролик в репозиторий.</p>
+              <p><strong>link</strong> - просто кнопка на внешний кейс.</p>
+              <p><strong>placeholder</strong> - карточка без ссылки, если ролик ещё не загружен.</p>
+            </div>
+          </article>
+
+          <article class="editor-card">
+            <p class="eyebrow">Статус</p>
+            <h2>Сообщения</h2>
+            <p id="admin-status" class="admin-status">Черновик загружен из исходного файла.</p>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
