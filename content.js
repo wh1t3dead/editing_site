@@ -28,7 +28,7 @@
           title: "Рилс по стилю",
           type: "mp4",
           url: "videos/style.mp4",
-          duration: "15-30 сек",
+          duration: "до 1 минуты",
           label: "",
           description: ""
         }
