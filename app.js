@@ -188,27 +188,27 @@
   }
 
   function applyMediaRatio(video, media) {
-    var width = video.videoWidth || 0;
-    var height = video.videoHeight || 0;
+  var width = video.videoWidth || 0;
+  var height = video.videoHeight || 0;
 
-    media.classList.remove('is-portrait', 'is-landscape', 'is-square');
+  media.classList.remove('is-portrait', 'is-landscape', 'is-square');
 
-    if (!width || !height) {
-      return;
-    }
+  if (!width || !height) {
+    return;
+  }
 
-    if (height > width) {
-      media.classList.add('is-portrait');
-      return;
-    }
+  media.style.aspectRatio = width + ' / ' + height;
 
-    if (width > height) {
-      media.classList.add('is-landscape');
-      return;
-    }
+  if (height > width) {
+    media.classList.add('is-portrait');
+    return;
+  }
 
+  if (width === height) {
     media.classList.add('is-square');
   }
+}
+
 
   function setupSmoothAnchors() {
     Array.prototype.forEach.call(document.querySelectorAll('a[href^="#"]'), function (anchor) {
