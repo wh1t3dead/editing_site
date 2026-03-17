@@ -148,8 +148,10 @@
     }
 
     if (type === 'mp4' && url) {
-      return '<video controls preload="metadata" playsinline src="' + escapeAttribute(url) + '"></video>';
+      var volume = typeof video.volume === 'number' ? video.volume : '';
+      return '<video controls preload="metadata" playsinline data-volume="' + escapeAttribute(volume) + '" src="' + escapeAttribute(url) + '"></video>';
     }
+
 
     return [
       '<div class="video-card__placeholder">',
@@ -176,6 +178,12 @@
       if (!media) {
         return;
       }
+
+      var volume = parseFloat(video.dataset.volume);
+      if (!Number.isNaN(volume)) {
+        video.volume = Math.max(0, Math.min(1, volume));
+      }
+
 
       if (video.readyState >= 1) {
         applyMediaRatio(video, media);
