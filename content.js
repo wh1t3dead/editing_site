@@ -45,7 +45,7 @@
           title: "Реклама в ТЦ",
           type: "mp4",
           url: "videos/library.mp4",
-          duration: "до 1 мин",
+          duration: "15-30 сек",
           label: "",
           description: ""
         }
