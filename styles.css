@@ -431,10 +431,10 @@ h3 {
 }
 
 .video-card__media.is-portrait {
-  aspect-ratio: 9 / 16;
   max-width: 420px;
   margin-inline: auto;
 }
+
 
 .video-card__media.is-square {
   aspect-ratio: 1 / 1;
