@@ -46,7 +46,7 @@
           type: "mp4",
           url: "videos/library.mp4",
           duration: "до 1 мин",
-          label: "Загрузи ссылку или mp4",
+          label: "",
           description: ""
         }
       ]
