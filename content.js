@@ -60,10 +60,10 @@
       videos: [
         {
           title: "Видео по рекламе проекта",
-          type: "placeholder",
+          type: "mp4",
           url: "videos/grishinium.mp4",
           duration: "30-60 сек",
-          label: "Добавь кейс проекта",
+          label: "",
           description: ""
         }
       ]
@@ -94,7 +94,7 @@
       videos: [
         {
           title: "Экспертный рилс с использованием ИИ",
-          type: "placeholder",
+          type: "mp4",
           url: "videos/ai.mp4",
           duration: "30-90 сек",
           label: "",
@@ -111,10 +111,10 @@
       videos: [
         {
           title: "Рилс с подкастом",
-          type: "placeholder",
+          type: "mp4",
           url: "videos/macan.mp4",
           duration: "30-60 сек",
-          label: "Добавь нарезку",
+          label: "у",
           description: ""
         }
       ]
