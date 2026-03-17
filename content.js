@@ -78,7 +78,7 @@
         {
           title: "Рилс по ксу (эдит)",
           type: "mp4",
-          url: "videos/cs_edit_2.mp4",
+          url: "videos/edit_cs_2.mp4",
           duration: "15-45 сек",
           label: "",
           description: ""
@@ -114,7 +114,7 @@
           type: "mp4",
           url: "videos/macan.mp4",
           duration: "30-60 сек",
-          label: "у",
+          label: "",
           description: ""
         }
       ]
