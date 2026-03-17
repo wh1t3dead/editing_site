@@ -69,16 +69,32 @@
     },
     {
       id: "cs-edit",
-      title: "cs2 edit",
-      accent: "Edits",
+      title: "edits",
+      accent: "Эдиты",
       summary: "",
       description: "",
       videos: [
         {
-          title: " ",
+          title: "cs2",
           type: "mp4",
           url: "videos/edit_cs_2.mp4",
           duration: "1-2 минуты",
+          label: "",
+          description: ""
+        },
+        {
+          title: "tiktok for heronwater",
+          type: "mp4",
+          url: "videos/heronwater_trapozoid.mp4",
+          duration: "5-15 сек",
+          label: "",
+          description: ""
+        },
+        {
+          title: "52",
+          type: "mp4",
+          url: "videos/52.mp4",
+          duration: "15-30 сек",
           label: "",
           description: ""
         }
