@@ -6,7 +6,7 @@
   }
 
   var totalVideos = data.topics.reduce(function (count, topic) {
-    return count + (Array.isArray(topic.videos) ? topic.videos.length : 0);
+    return count + countTopicVideos(topic);
   }, 0);
 
   fillHero(data.site, totalVideos, data.topics.length);
@@ -78,25 +78,7 @@
     }
 
     root.innerHTML = topics.map(function (topic) {
-      var panelId = 'topic-panel-' + (topic.id || Math.random().toString(36).slice(2));
-
-      return [
-        '<article class="topic-card reveal">',
-        '<button class="topic-card__toggle" type="button" aria-expanded="false" aria-controls="' + panelId + '">',
-        '<span class="topic-card__accent">' + escapeHtml(topic.accent || 'Тема') + '</span>',
-        '<span class="topic-card__count">' + String((topic.videos || []).length) + '</span>',
-        '<h3>' + escapeHtml(topic.title || 'Без названия') + '</h3>',
-        hasText(topic.summary) ? '<p class="topic-card__summary">' + escapeHtml(topic.summary) + '</p>' : '',
-        '<span class="topic-card__chevron" aria-hidden="true"></span>',
-        '</button>',
-        '<div class="topic-card__panel" id="' + panelId + '">',
-        '<div class="topic-card__panel-inner">',
-        hasText(topic.description) ? '<p class="topic-card__description">' + escapeHtml(topic.description) + '</p>' : '',
-        '<div class="video-grid">' + renderVideos(topic.videos || []) + '</div>',
-        '</div>',
-        '</div>',
-        '</article>'
-      ].join('');
+      return renderTopic(topic, false);
     }).join('');
 
     Array.prototype.forEach.call(root.querySelectorAll('.topic-card__toggle'), function (button) {
@@ -108,6 +90,42 @@
         article.classList.toggle('is-open', !isExpanded);
       });
     });
+  }
+
+  function renderTopic(topic, isSubtopic) {
+    var panelId = 'topic-panel-' + (topic.id || Math.random().toString(36).slice(2));
+    var subtopics = Array.isArray(topic.subtopics) ? topic.subtopics : [];
+    var videos = Array.isArray(topic.videos) ? topic.videos : [];
+
+    return [
+      '<article class="topic-card' + (isSubtopic ? ' topic-card--subtopic' : ' reveal') + '">',
+      '<button class="topic-card__toggle" type="button" aria-expanded="false" aria-controls="' + panelId + '">',
+      '<span class="topic-card__accent">' + escapeHtml(topic.accent || (isSubtopic ? 'Подкатегория' : 'Тема')) + '</span>',
+      '<span class="topic-card__count">' + String(countTopicVideos(topic)) + '</span>',
+      '<h3>' + escapeHtml(topic.title || 'Без названия') + '</h3>',
+      hasText(topic.summary) ? '<p class="topic-card__summary">' + escapeHtml(topic.summary) + '</p>' : '',
+      '<span class="topic-card__chevron" aria-hidden="true"></span>',
+      '</button>',
+      '<div class="topic-card__panel" id="' + panelId + '">',
+      '<div class="topic-card__panel-inner">',
+      hasText(topic.description) ? '<p class="topic-card__description">' + escapeHtml(topic.description) + '</p>' : '',
+      videos.length ? '<div class="video-grid">' + renderVideos(videos) + '</div>' : '',
+      subtopics.length ? '<div class="subtopics-list">' + subtopics.map(function (subtopic) {
+        return renderTopic(subtopic, true);
+      }).join('') + '</div>' : '',
+      '</div>',
+      '</div>',
+      '</article>'
+    ].join('');
+  }
+
+  function countTopicVideos(topic) {
+    var count = Array.isArray(topic.videos) ? topic.videos.length : 0;
+    var subtopics = Array.isArray(topic.subtopics) ? topic.subtopics : [];
+
+    return subtopics.reduce(function (total, subtopic) {
+      return total + countTopicVideos(subtopic);
+    }, count);
   }
 
   function renderVideos(videos) {
@@ -173,7 +191,9 @@
   }
 
   function setupMediaRatios() {
-    Array.prototype.forEach.call(document.querySelectorAll('.video-card__media video'), function (video) {
+    var videos = Array.prototype.slice.call(document.querySelectorAll('.video-card__media video'));
+
+    videos.forEach(function (video) {
       var media = video.closest('.video-card__media');
       if (!media) {
         return;
@@ -191,6 +211,14 @@
 
       video.addEventListener('loadedmetadata', function () {
         applyMediaRatio(video, media);
+      });
+
+      video.addEventListener('play', function () {
+        videos.forEach(function (otherVideo) {
+          if (otherVideo !== video) {
+            otherVideo.pause();
+          }
+        });
       });
     });
   }
