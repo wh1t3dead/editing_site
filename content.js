@@ -138,6 +138,66 @@
       ]
     },
     {
+      id: "stream-cuts",
+      title: "Нарезка стримов",
+      accent: "Стрим-контент",
+      summary: "",
+      description: "",
+      subtopics: [
+        {
+          id: "stream-cuts-cs",
+          title: "Нарезка кс",
+          accent: "CS",
+          summary: "",
+          description: "",
+          videos: [
+            {
+              title: "Нарезка кс",
+              type: "mp4",
+              url: "videos/cs_twitch_1.mp4",
+              duration: "Видео",
+              label: "",
+              description: ""
+            }
+          ]
+        },
+        {
+          id: "stream-cuts-dota",
+          title: "Нарезка дота",
+          accent: "Dota",
+          summary: "",
+          description: "",
+          videos: [
+            {
+              title: "Нарезка дота",
+              type: "mp4",
+              url: "videos/dota_twitch_1.mp4",
+              duration: "Видео",
+              label: "",
+              description: ""
+            }
+          ]
+        },
+        {
+          id: "stream-cuts-talking",
+          title: "Нарезка толкинг",
+          accent: "Talking",
+          summary: "",
+          description: "",
+          videos: [
+            {
+              title: "Нарезка толкинг",
+              type: "mp4",
+              url: "videos/talk_twitch_1.mp4",
+              duration: "Видео",
+              label: "",
+              description: ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: "youtube",
       title: "Youtube видео",
       accent: "YOUTUBE",
