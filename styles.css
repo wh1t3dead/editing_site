@@ -369,7 +369,7 @@ h3 {
   transition: transform 260ms ease;
 }
 
-.topic-card.is-open .topic-card__chevron {
+.topic-card.is-open > .topic-card__toggle .topic-card__chevron {
   transform: rotate(225deg);
 }
 
@@ -380,7 +380,7 @@ h3 {
   transition: grid-template-rows 340ms ease, opacity 260ms ease;
 }
 
-.topic-card.is-open .topic-card__panel {
+.topic-card.is-open > .topic-card__panel {
   grid-template-rows: 1fr;
   opacity: 1;
 }
@@ -390,8 +390,28 @@ h3 {
   padding: 0 24px 0;
 }
 
-.topic-card.is-open .topic-card__panel-inner {
+.topic-card.is-open > .topic-card__panel > .topic-card__panel-inner {
   padding-bottom: 24px;
+}
+
+.subtopics-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.topic-card--subtopic {
+  background: rgba(255, 255, 255, 0.018);
+  border-radius: var(--radius-md);
+}
+
+.topic-card--subtopic .topic-card__toggle {
+  grid-template-columns: 140px 44px minmax(0, 1fr) 18px;
+  padding: 18px;
+}
+
+.topic-card--subtopic .topic-card__accent {
+  min-width: 110px;
 }
 
 .video-grid {
@@ -718,6 +738,10 @@ code {
     grid-template-columns: 1fr auto;
   }
 
+  .topic-card--subtopic .topic-card__toggle {
+    grid-template-columns: 1fr auto;
+  }
+
   .topic-card__accent,
   .topic-card__count,
   .topic-card__summary {
@@ -749,7 +773,7 @@ code {
   .editor-card,
   .cta-panel,
   .topic-card__toggle,
-  .topic-card.is-open .topic-card__panel-inner {
+  .topic-card.is-open > .topic-card__panel > .topic-card__panel-inner {
     padding: 20px;
   }
 
