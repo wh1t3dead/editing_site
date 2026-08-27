@@ -150,12 +150,47 @@
           accent: "CS",
           summary: "",
           description: "",
+          videoLayout: "shorts",
           videos: [
             {
-              title: "Нарезка кс",
+              title: "",
               type: "mp4",
-              url: "videos/cs_twitch_1.mp4",
-              duration: "Видео",
+              url: "videos/1_1.mp4",
+              label: "",
+              description: ""
+            },
+            {
+              title: "",
+              type: "mp4",
+              url: "videos/1_2.mp4",
+              label: "",
+              description: ""
+            },
+            {
+              title: "",
+              type: "mp4",
+              url: "videos/1_3.mp4",
+              label: "",
+              description: ""
+            },
+            {
+              title: "",
+              type: "mp4",
+              url: "videos/1_4.mp4",
+              label: "",
+              description: ""
+            },
+            {
+              title: "",
+              type: "mp4",
+              url: "videos/1_5.mp4",
+              label: "",
+              description: ""
+            },
+            {
+              title: "",
+              type: "mp4",
+              url: "videos/1_6.mp4",
               label: "",
               description: ""
             }

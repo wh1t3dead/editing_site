@@ -96,6 +96,7 @@
     var panelId = 'topic-panel-' + (topic.id || Math.random().toString(36).slice(2));
     var subtopics = Array.isArray(topic.subtopics) ? topic.subtopics : [];
     var videos = Array.isArray(topic.videos) ? topic.videos : [];
+    var videoLayout = topic.videoLayout || '';
 
     return [
       '<article class="topic-card' + (isSubtopic ? ' topic-card--subtopic' : ' reveal') + '">',
@@ -109,7 +110,7 @@
       '<div class="topic-card__panel" id="' + panelId + '">',
       '<div class="topic-card__panel-inner">',
       hasText(topic.description) ? '<p class="topic-card__description">' + escapeHtml(topic.description) + '</p>' : '',
-      videos.length ? '<div class="video-grid">' + renderVideos(videos) + '</div>' : '',
+      videos.length ? '<div class="video-grid' + (videoLayout === 'shorts' ? ' video-grid--shorts' : '') + '">' + renderVideos(videos, videoLayout) + '</div>' : '',
       subtopics.length ? '<div class="subtopics-list">' + subtopics.map(function (subtopic) {
         return renderTopic(subtopic, true);
       }).join('') + '</div>' : '',
@@ -128,11 +129,14 @@
     }, count);
   }
 
-  function renderVideos(videos) {
+  function renderVideos(videos, videoLayout) {
     return videos.map(function (video) {
+      var isShorts = videoLayout === 'shorts';
+
       return [
-        '<article class="video-card">',
+        '<article class="video-card' + (isShorts ? ' video-card--shorts' : '') + '">',
         '<div class="video-card__media">' + renderMedia(video) + '</div>',
+        isShorts ? '' : [
         '<div class="video-card__body">',
         '<div class="video-card__meta">',
         '<span>' + escapeHtml(video.duration || 'Видео') + '</span>',
@@ -142,6 +146,7 @@
         hasText(video.description) ? '<p>' + escapeHtml(video.description) + '</p>' : '',
         renderVideoAction(video),
         '</div>',
+        ].join(''),
         '</article>'
       ].join('');
     }).join('');
